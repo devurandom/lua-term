@@ -1,6 +1,6 @@
 CFLAGS=-Wall -Werror -std=c89 -pedantic -g -fPIC -I/usr/include/lua5.2 -D_XOPEN_SOURCE
 
-all: term_util.so
+all: term.so
 
 clean:
 	$(RM) *.so *.a *.o
