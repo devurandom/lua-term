@@ -8,6 +8,8 @@ LIBS=-llua$(LUA_VERSION)
 
 all: term.so
 
+term.o: term.c lextlib/lextlib_lua52.h
+
 clean:
 	$(RM) *.so *.o
 

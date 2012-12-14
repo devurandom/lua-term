@@ -7,6 +7,9 @@
 #include <lauxlib.h>
 
 
+#include "lextlib/lextlib_lua52.h"
+
+
 int term_echo_off(lua_State *L) {
 	struct termios flags;
 
