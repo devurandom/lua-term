@@ -3,15 +3,12 @@ CFLAGS=-Wall -Werror -std=c89 -pedantic -g -fPIC -I/usr/include/lua5.2 -D_XOPEN_
 all: term.so
 
 clean:
-	$(RM) *.so *.a *.o
+	$(RM) *.so *.o
 
-.SUFFIXES: .c .o .a .so
+.SUFFIXES: .c .o .so
 
 .c.o:
 	$(CC) $(CFLAGS) -o $@ -c $<
-
-.o.a:
-	$(AR) r $@ $^
 
 .o.so:
 	$(CC) $(CFLAGS) $(LDFLAGS) -shared -o $@ $^ $(LIBS)
